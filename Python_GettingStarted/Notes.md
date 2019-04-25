@@ -20,6 +20,22 @@ def add_number2(a: int, b: int):
 `int_pi = int(pi)`
 `str_pi = str(pi)`
 
+### Objects
+
+In Python, everything is an object.
+
+![](E:\my_git_repo\python\python\Python_GettingStarted\objects.png)
+
+**Equality vs Identity**
+
+```
+a = 10					a==b  #true
+
+b = 10					a is b  #false
+```
+
+
+
 ### Some string functions
 
 `replace('a', 'b')`
@@ -100,9 +116,12 @@ except Exception:
 - bytes, bytearray
 - tuple
 - set
+- None
 
 ## 3) Functions
 ### Functions
+Arguments are called by reference. If a variable is changed inside a function, it is also changed in original.
+
 You can define a default value for a function parameter
 `def insert_element(a = 0):`
 
@@ -211,6 +230,14 @@ Eg. If HighSchoolStudent class is defined in hs_student.py. You must import it a
 ```
 from hs_student import HighSchoolStudent
 ```
+### math Module
+```
+import math
+
+help(math)   #returns the definition of the math module
+```
+
+**Note:** Python can work with very big numbers.
 
 ### Comments
 
@@ -225,6 +252,22 @@ Multiline comment
 ```
 
 **As a rule:** You should leave two spaces if the comment is in the same line with the code. And you should leave a breakline if comment is in a seperate line.
+
+### Function Comment
+
+```
+"""
+
+Description
+
+Args:
+
+Returns:
+
+"""
+```
+
+**Docstring:**  This is the string when help(function_name) returns.
 
 ## 5) Python Tips and Tricks
 
@@ -263,4 +306,21 @@ To create an .exe file, First install pyinstaller
   ```
 
 To create a setup file, First install Inno Setup. Then a wizard can be used to create a setup file by using .exe file.
+
+### The Python Execution Model
+
+A module can be executed or can be imported. When a module is imported. 
+
+`python module_name.py`
+
+or
+
+`import module_name`
+
+The execution starts from the main function.
+
+```
+if __name__ == __main__
+
+```
 
